@@ -4,7 +4,7 @@
 #inteiro ou decimal.
 num1=float(input("Qual o primeiro numero:"))
 num2=float(input("Qual o segundo numero:"))
-pergunta=int(input("O que voce quer fazer:\nadição[1]\nsubtração[2]\nmultiplicação[3]\ndivisão[4]"))
+pergunta=int(input("O que voce quer fazer:\nadição[1]\nsubtração[2]\nmultiplicação[3]\ndivisão[4]\n"))
 if pergunta==1:
   resp=num1+num2
   print("{}+{}={}".format(num1,num2,resp))
@@ -12,12 +12,12 @@ if pergunta==1:
     print("Numero positivo")
   else:
     print("Numero negativo")
-   
   teste=resp
   if teste==round(resposta):
     print("Esse numero nao é um numero flutuante")
   else:
     print("Esse numero é um numero flutuante")
+
 if pergunta==2:
   resp=num1-num2
   print("{}-{}={}".format(num1,num2,resp))
@@ -31,9 +31,9 @@ if pergunta==2:
     print("Esse numero nao é um numero flutuante")
   else:
     print("Esse numero é um numero flutuante")
-if pergunta==1:
-  resp=num1+num2
-  print("{}+{}={}".format(num1,num2,resp))
+if pergunta==3:
+  resp=num1*num2
+  print("{}*{}={}".format(num1,num2,resp))
   if resp>=0:
     print("Numero positivo")
   else:
@@ -44,4 +44,20 @@ if pergunta==1:
     print("Esse numero nao é um numero flutuante")
   else:
     print("Esse numero é um numero flutuante")
+
+if pergunta==4:
+  resp=num1*num2
+  print("{}*{}={}".format(num1,num2,resp))
+  if resp>=0:
+    print("Numero positivo")
+  else:
+    print("Numero negativo")
+   
+  teste=resp
+  if teste==round(resp):
+    print("Esse numero nao é um numero flutuante")
+  else:
+    print("Esse numero é um numero flutuante")
+if pergunta>4:
+  print("ERROR")
     
