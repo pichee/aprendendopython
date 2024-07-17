@@ -3,7 +3,7 @@ quanto=int(input("Quantas notas voce quer calcular:"))
 media=0
 aux=1
 for aux in range(quanto):
-  nota=int(input("Qual foi sua nota:"))
+  nota=float(input("Qual foi sua nota:"))
   media=media+nota
 
 media=media/quanto
