@@ -12,28 +12,34 @@ def forca(x):
     aleatorio=['minecraft','fiorin','computador','coelho','sono']
     palavra=random.randint(0,4)
     ganhar=aleatorio[palavra]
+    palavra=aleatorio[palavra]
     tamanho=len(ganhar)
     a=0
     erro=0
-    _="_"*tamanho
-    resposta=''
+    _=["_"]*tamanho
     print(f"{_}")
     while True:
        letra=input("Fale uma letra:")
-       print(f"{resposta}{letra}")
        a=0
+       aux=0
        for a in range(tamanho):
-          if letra==ganhar[a]:
-             resposta=resposta+letra
-             continue
-          else:
-             erro=erro+1
+          if letra==palavra[a]:
+             _[a]=letra 
+             print(f"{_}")
+             aux=1
+          
+        
+       if aux==0:
+           erro=1+erro
+       if "_" not in _:
+           print("Voce ganhou")
+           exit()
+           
        if erro==6:
           print("Voce perdeu")
-          exit
-            
+          exit()
 
-          
+
 
 
 forca(0)
